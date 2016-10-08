@@ -1,6 +1,4 @@
-Rust标准库: std::fmt
-
-https://doc.rust-lang.org/std/fmt/
+Rust标准库: [std::fmt](https://doc.rust-lang.org/std/fmt/)
 
 格式化和打印`String`s的工具
 
