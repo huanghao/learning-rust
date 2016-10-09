@@ -1,5 +1,10 @@
 # Unknown
 
+面向python程序猿的rust入门手册。
+相同的地方，不同的地方
+
+Box是啥？
+
 这种编译器指示标记，还有啥，什么语法?
 > #[derive(Debug)]
 > #[allow(dead_code)]
