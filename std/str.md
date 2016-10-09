@@ -73,7 +73,7 @@ UTF-8编码的字符串
 
 返回一个迭代器，每个元素都是一个二元组，（对应的字节位置，`char`）
 
-`let y = "你们好";
+    let y = "你们好";
     let count = y.chars().count();
     println!("length: {}", count);
     for (i, c) in y.char_indices() {
@@ -83,7 +83,7 @@ UTF-8编码的字符串
     length: 3
     0: 你, '\u{4f60}'
     3: 们, '\u{4eec}'
-    6: 好, '\u{597d}'`
+    6: 好, '\u{597d}'
 
 ### fn bytes(&self) -> Bytes
 
