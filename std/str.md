@@ -1,9 +1,3 @@
-Rust标准库: std::string
-
-UTF-8编码的字符串
-
-包含`String`类，`ToString`特性，和一些跟字符串有关的错误类。
-
 # Rust原生类: str
 
 也叫做String切片('string slice')。字符串字面量就是这个类型。

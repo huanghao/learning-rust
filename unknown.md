@@ -1,5 +1,7 @@
 # Unknown
 
+OsString: https://doc.rust-lang.org/std/ffi/struct.OsString.html
+
 面向python程序猿的rust入门手册。
 相同的地方，不同的地方
 
