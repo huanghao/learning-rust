@@ -1,4 +1,4 @@
-# Rust标准库: std::str
+# Rust标准库: [std::str](https://doc.rust-lang.org/std/primitive.str.html)
 
 这个库里最重要的类型就是原生字符串类：`str`。也叫做String切片('string slice')。字符串字面量就是这个类型。
 

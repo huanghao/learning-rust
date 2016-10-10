@@ -1,4 +1,4 @@
-Rust标准库: std::string
+Rust标准库: [std::string](https://doc.rust-lang.org/std/string/)
 
 UTF-8编码自动增长的字符串。这个类是最常见的对其内容字符串有所有权的类型。它和原生`str`有很多联系。
 
