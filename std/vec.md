@@ -91,7 +91,6 @@ vec对drop元素的顺序没有保证。（这个顺序原来变化过，以后�
 * `resize(new_len: usize, value: T)` 如果`new_len`大于`len()`，Vec用`value`来填充扩大到`new_len`。否则，Vec被截断到`new_len`
 * `extend_from_slice(other: &[T])` 拷贝`other`然后追加到末尾
 * `dedup()` 去除连续的重复元素
-* 
 
 
 
