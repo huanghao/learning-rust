@@ -1,6 +1,8 @@
-# Rust原生类: str
+# Rust标准库: std::str
 
-也叫做String切片('string slice')。字符串字面量就是这个类型。
+这个库里最重要的类型就是原生字符串类：`str`。也叫做String切片('string slice')。字符串字面量就是这个类型。
+
+这个模块还包含一些辅助的结构体，和字符串模式`pattern`这个子模块。
 
 `str`总是合法的UTF-8。两种特别常见的形式，`&str`, `&'static str`。第二种形式的字符串存储在最终的二进制文件中，在`'static`生命周期中有效。
 

@@ -1,5 +1,11 @@
 # Unknown
 
+对比：
+- String, str, byte[], Vec<u8>
+- [T; size], &[], Vec
+
+mut 可变的是变量还是内容本身？ &str本身应该是不可变的，那&mut str是啥意思？创建一个新字符串，把指针变化？那对象是否都是这样？
+
 OsString: https://doc.rust-lang.org/std/ffi/struct.OsString.html
 
 面向python程序猿的rust入门手册。

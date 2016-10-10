@@ -40,19 +40,34 @@ UTF-8编码自动增长的字符串。这个类是最常见的对其内容字符
 * `as_str() -> &str` 字符串切片
 * `as_mut_str() -> &mut str` 可变的字符串切片
 * `as_bytes() -> &[u8]` 返回一个字节数组
+* `unsafe as_mut_vec() -> &mut Vec<u8>` 返回一个可变的vector
+* `into_boxed_str() -> Box<str>`
 
 ## 查询操作
 
 * `capacity() -> usize` 容量大小
+* `len() -> usize` 长度
+* `is_empty() -> bool` 是否为空
 
 
 ## 修改大小
 
-* `reserve(&mut self, additional: usize)` 确保在容量上至少保留`additional`大小。调用以后，可能会增加多于`additional`的空间，来防止再次重新分配。如果不想要“至少”而是“正好”的话，可以用`reserve_exact()`。除非你能做得比分配器更好，一般情况下用`reserve`就足够了。
+* `reserve(additional: usize)` 确保在容量上至少保留`additional`大小。调用以后，可能会增加多于`additional`的空间，来防止再次重新分配。如果不想要“至少”而是“正好”的话，可以用`reserve_exact()`。除非你能做得比分配器更好，一般情况下用`reserve`就足够了。
 * `shrink_to_fit` 收缩容量到和长度一样大。正好装下现有的数据
 
 ## 修改内容
 
-* `push(&mut self, ch: char)` 在末尾添加一个字符
-* `push_str(&mut self, string: &str)` 在末尾添加一个字符串
-* `truncate(&mut self, new_len: usize)` 把长度截断到`new_len`，如果`new_len`大于实际的大小，将没有作用
+* `push(ch: char)` 在末尾添加一个字符
+* `pop()` 从末尾去掉一个字符。如果字符串为空，就返回None
+* `push_str(string: &str)` 在末尾添加一个字符串
+* `truncate(new_len: usize)` 把长度截断到`new_len`，如果`new_len`大于实际的大小，将没有作用。如果`new_len`不在utf8的字符边界函数会panic
+* `remove(idx: usize) -> char` 删除位置为`idx`的字符并返回。这个操作的复杂度是O(n)。如果`idx`大于字符串长度，或者不在字符的边界上，函数会panic
+* `insert(idx: usize, ch: char)` 把字符`ch`插入到位置`idx`上。时间复杂度也是O(n)。如果`idx`大于字符串长度，或者不在字符的边界上，函数panic
+* `clear()` 字符串内容清空，容量大小不变。
+* `drain<R>(range: R) -> Drain where R: RangeArgument<usize>` 用一个范围来删除这部分内容并返回
+
+
+
+
+
+
